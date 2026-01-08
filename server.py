@@ -9,5 +9,9 @@ def emotion_detector():
     response = emotion_detector(text_to_analyze)
     return response
 
+@app.route("/")
+def render_index_page():
+    return render_template('index.html')
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)  
